@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Deal} from './deal'; 
-
-
 import {DealService} from './deal.service'; 
 import { AuthService } from './auth.service';
 
@@ -15,9 +13,7 @@ export class PublicDealsComponent implements OnInit {
     
     publicDeals: Deal[]; 
 
-    constructor( private dealService: DealService, private authService: AuthService) { 
-        
-    }
+    constructor( private dealService: DealService, private authService: AuthService) {}
 
     ngOnInit():void { 
         this.dealService.getPublicDeals()

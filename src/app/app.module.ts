@@ -5,12 +5,9 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import {AuthGuard} from './auth-guard.service';
 import {AuthService} from './auth.service'; 
-
 import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt';
-
 import { AppComponent } from './app.component';
 import { routing, routedComponents } from './app.routing';
-
 import {PublicDealsComponent} from './public-deals.component'; 
 import {PrivateDealsComponent} from './private-deals.component'; 
 

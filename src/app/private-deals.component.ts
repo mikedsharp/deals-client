@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Deal } from './deal';
 import { DealService } from './deal.service';
 import { AuthService } from './auth.service';
-
 
 @Component({
   selector: 'private-deals',
