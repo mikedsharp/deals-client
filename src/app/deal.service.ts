@@ -4,6 +4,7 @@ import {Headers, Http, Response} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import {Deal} from './deal'; 
+import {AuthHttp} from 'angular2-jwt'; 
 
 @Injectable()
 export class DealService {
@@ -11,7 +12,7 @@ export class DealService {
     private publicDealsUrl = 'http://localhost:3000/deals/public';  
     private privateDealsUrl = 'http://localhost:3000/deals/private';  
     
-    constructor(private http: Http) { 
+    constructor(private http: Http, private authHttp: AuthHttp) { 
 
     }
 
@@ -24,7 +25,7 @@ export class DealService {
     }
 
     getPrivateDeals(){
-         return this.http
+         return this.authHttp
             .get(this.privateDealsUrl)
             .toPromise()
             .then(response => response.json() as Deal[])

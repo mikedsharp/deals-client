@@ -4,6 +4,8 @@ import { Routes, RouterModule} from '@angular/router';
 import { PublicDealsComponent } from './public-deals.component';
 import { PrivateDealsComponent } from './private-deals.component';
 
+import { AuthGuard } from './auth-guard.service';
+
 const appRoutes: Routes = [
   // Add the redirect
   {
@@ -18,7 +20,8 @@ const appRoutes: Routes = [
   },
   {
     path: 'special',
-    component: PrivateDealsComponent
+    component: PrivateDealsComponent, 
+    canActivate: [AuthGuard]
   }
 ];
 // Here we are exporting our routes
