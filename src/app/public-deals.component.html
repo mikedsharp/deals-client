@@ -16,7 +16,7 @@
         </ul>
         <ul class="list-inline">
           <li><a class="btn btn-danger">${{deal.originalPrice | number}}</a></li>
-          <li class="pull-right"><a class="btn btn-success">${{deal.salePrice | number}}</a></li>
+          <li class="pull-right"><a  (click)="purchase(deal)" class="btn btn-success">${{deal.salePrice | number}}</a></li>
         </ul>
       </div>
     </div>
