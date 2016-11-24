@@ -1,5 +1,8 @@
 # DealsClient
 
+## Following this tutorial: https://auth0.com/blog/angular-2-authentication/
+
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
 
 ## Development server
